@@ -1,0 +1,228 @@
+/* ?---------- VARIABLES GLOBALES -----------*/
+:root{
+    --colorPrimaryDark: #0A3871;
+    --colorPrimaryLigth:#F3F5FC;
+    --colorDecryptor: #D8DFE8;
+    --colorSecundaryGrey: #495057;
+    --colorSecundaryGreyDark: #343A40;
+    --colorBlanco: #FAFAFA;
+}
+/* ?---------- FIN VARIABLES GLOBALES -----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--colorPrimaryLigth);
+    font-family: "Inter", sans-serif;
+    
+}
+/* !------------------------ HEADER LOGO --------------------- */
+.header-logo{
+    height: 6rem ;
+    display: flex;
+    align-items: center;
+    .logo{
+        height: 50px;
+        margin: 1rem;
+    }
+}
+
+/* !------------------------ FIN HEADER LOGO --------------------- */
+.container1{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+}
+@media (min-width: 1100px) {
+    .container1{
+        flex-direction: row;
+    }
+}
+.container2{
+    flex-grow: 1;
+}
+.container-main{
+    padding: 1rem;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1100px) {
+    .container-main{
+        margin-left: 6rem;
+    }
+}
+
+/*? ----------------------------- ESTILOS DEL INPUT ---------------------------- */
+.container-input{
+    flex-grow: 1;
+}
+.input-text{
+    font-size: 2rem;
+    color: var(--colorPrimaryDark);
+    background-color: var(--colorPrimaryLigth);
+    width: 100%;
+    border: none;
+}
+.input-text::placeholder {
+    font-family: "Inter", sans-serif;
+    color: var(--colorPrimaryDark);
+    font-size: 2rem; 
+  }
+.input-text:focus {
+    outline: none;
+  }
+
+/*? ----------------------------- FIN ESTILOS DEL INPUT ---------------------------- */
+.info{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    .info-text{
+        color: var(--colorSecundaryGrey);
+        font-size: 12px;
+    }
+}
+
+/*TODO------------------------------- BOTONES ---------------------------- */
+.buttons{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    .button{
+        background-color: var(--colorPrimaryDark);
+        height: 67px;
+        border-radius: 24px;
+        color: var(--colorPrimaryLigth);
+        border: solid 1px var(--colorPrimaryDark);
+        font-size: 16px;
+        transition: transform .3s;
+    }
+    .button:hover{
+        cursor: pointer;
+    }
+    .button:active{
+        transform: scale(1.05);
+    }
+    .button-decrypt{
+        color: var(--colorPrimaryDark);
+        background-color: var(--colorDecryptor);
+        transition: transform .3s;
+    }
+    .button-derypt:active{
+        transform: scale(1.05);
+    }
+}
+@media (min-width: 768px) {
+    .buttons{
+        flex-direction: row;
+    }
+    .button{
+        width: 100%;
+    }
+}
+
+/*TODO------------------------------- FIN BOTONES ---------------------------- */
+
+.decryptor{
+    max-height: 98vh;
+    padding: 2rem;
+    margin: 1rem 1rem 3rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 25px 35px -3px rgba(171,171,173,0.6);
+    -moz-box-shadow: 0px 25px 35px -3px rgba(171,171,173,0.6);
+    box-shadow: 0px 25px 35px -3px rgba(171,171,173,0.6);
+    .decryptor-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .decryptor-text{
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+@media (min-width: 1100px) {
+    .decryptor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 1rem 1rem;
+        width: 400px;
+    }
+}
+
+#decryptor-window{
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.decryptor-window-grow{
+    flex-grow: 1;
+}
+.decryptor-nd{
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: start;
+}
+.bt-copy{
+    background-color: #ffffff;
+    min-height: 67px;
+    width: 100%;
+    border-radius: 24px;
+    color: var(--colorPrimaryDark);
+    border: solid 1px var(--colorPrimaryDark);
+    font-size: 16px;
+    transition: transform .3s;
+}
+.bt-copy:hover{
+    cursor: pointer;
+}
+.bt-copy:active{
+    transform: scale(1.05);
+}
+@media (min-width: 1100px) {
+    .bt-copy{
+        min-width: 336px;
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+.text-grey{
+    color: var(--colorSecundaryGrey);
+    font-size: 1.6rem;
+    overflow: wrap;
+    min-width: 0;
+}
+@media (min-width: 1100px) {
+    .text-blue{
+        max-width: 400px;
+    }
+}
+
+
+.image{
+    display: none;
+}
+@media (min-width: 1100px) {
+    .image{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
